@@ -6,7 +6,7 @@ set shellslash                           " ファイル名の展開にスラッ�
 set showmode                             " 現在のモードを表示
 set ruler                                " ルーラーの表示
 syntax on                                " シンタックスハイライトを有効に設定
-set tabstop=4 shiftwidth=4 softtabstop=0 " タブの表示設定
+set tabstop=2 shiftwidth=2 softtabstop=0 " タブの表示設定
 set expandtab                            " タブを空白文字に展開
 set autoindent smartindent               " 自動インデント、スマートインデント
 set guifont=MS_Gothic:h13
