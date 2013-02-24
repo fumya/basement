@@ -1,53 +1,67 @@
 set nocompatible
 setlocal omnifunc=syntaxcomplete#Complete
 
-" åŸºæœ¬è¨­å®š
-set shellslash                           " ãƒ•ã‚¡ã‚¤ãƒ«åã®å±•é–‹ã«ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ã‚’ä½¿ç”¨
-set showmode                             " ç¾åœ¨ã®ãƒ¢ãƒ¼ãƒ‰ã‚’è¡¨ç¤º
-set ruler                                " ãƒ«ãƒ¼ãƒ©ãƒ¼ã®è¡¨ç¤º
-syntax on                                " ã‚·ãƒ³ã‚¿ãƒƒã‚¯ã‚¹ãƒã‚¤ãƒ©ã‚¤ãƒˆã‚’æœ‰åŠ¹ã«è¨­å®š
-set tabstop=2 shiftwidth=2 softtabstop=0 " ã‚¿ãƒ–ã®è¡¨ç¤ºè¨­å®š
-set expandtab                            " ã‚¿ãƒ–ã‚’ç©ºç™½æ–‡å­—ã«å±•é–‹
-set autoindent smartindent               " è‡ªå‹•ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã€ã‚¹ãƒãƒ¼ãƒˆã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆ
+" Šî–{İ’è
+set shellslash                           " ƒtƒ@ƒCƒ‹–¼‚Ì“WŠJ‚ÉƒXƒ‰ƒbƒVƒ…‚ğg—p
+colorscheme desert                       " ”wŒiF
+set showmode                             " Œ»İ‚Ìƒ‚[ƒh‚ğ•\¦
+set ruler                                " ƒ‹[ƒ‰[‚Ì•\¦
+"set columns=80                           " ƒXƒNƒŠ[ƒ“ã‚Ì—ñ•
+"set lines=72                             " ƒEƒBƒ“ƒhƒE‚Ì‚‚³
+syntax on                                " ƒVƒ“ƒ^ƒbƒNƒXƒnƒCƒ‰ƒCƒg‚ğ—LŒø‚Éİ’è
+set tabstop=2 shiftwidth=2 softtabstop=0 " ƒ^ƒu‚Ì•\¦İ’è
+set expandtab                            " ƒ^ƒu‚ğ‹ó”’•¶š‚É“WŠJ
+set autoindent smartindent               " ©“®ƒCƒ“ƒfƒ“ƒgAƒXƒ}[ƒgƒCƒ“ƒfƒ“ƒg
 set guifont=MS_Gothic:h13
+set backspace=indent,eol,start
 
-" å…¥åŠ›è£œåŠ©
-set formatoptions+=m                     " æ•´å½¢ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã€ãƒãƒ«ãƒãƒã‚¤ãƒˆç³»ã‚’è¿½åŠ 
-set foldmethod=marker foldmarker={{{,}}} " æŠ˜ã‚Šç•³ã‚€ç¨®é¡
+" “ü—Í•â•
+set formatoptions+=m                     " ®Œ`ƒIƒvƒVƒ‡ƒ“Aƒ}ƒ‹ƒ`ƒoƒCƒgŒn‚ğ’Ç‰Á
+set foldmethod=marker foldmarker={{{,}}} " Ü‚èô‚Şí—Ş
 
-" æ¤œç´¢é–¢é€£
-set wrapscan                             " æœ€å¾Œã¾ã§æ¤œç´¢ã—ãŸã‚‰æœ€åˆã«æˆ»ã‚‹
-set incsearch                            " ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ã‚¿ãƒ«ã‚µãƒ¼ãƒã‚’è¡Œã†
-set hlsearch                             " æ¤œç´¢çµæœã‚’ãƒã‚¤ãƒ©ã‚¤ãƒˆã™ã‚‹
+" ŒŸõŠÖ˜A
+set wrapscan                             " ÅŒã‚Ü‚ÅŒŸõ‚µ‚½‚çÅ‰‚É–ß‚é
+set incsearch                            " ƒCƒ“ƒNƒŠƒƒ“ƒ^ƒ‹ƒT[ƒ`‚ğs‚¤
+set hlsearch                             " ŒŸõŒ‹‰Ê‚ğƒnƒCƒ‰ƒCƒg‚·‚é
 
-" ãƒ•ã‚¡ã‚¤ãƒ«é–¢é€£
-set nobackup                             " ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã‚’ä½œæˆã—ãªã„
-set autoread                             " å¤–éƒ¨ã‚¨ãƒ‡ã‚£ã‚¿ã§æ›¸ãæ›ãˆã‚‰ã‚ŒãŸå ´åˆã€è‡ªå‹•ã§èª­ã¿ç›´ã™
-set noswapfile                           " ã‚¹ãƒ¯ãƒƒãƒ—ã‚’ä½œæˆã—ãªã„
-set hidden                               " ä¿å­˜ã—ãªã„ã§ä»–ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¡¨ç¤ºã™ã‚‹ã“ã¨ãŒå‡ºæ¥ã‚‹ã‚ˆã†ã«ã™ã‚‹
+" ƒtƒ@ƒCƒ‹ŠÖ˜A
+set nobackup                             " ƒoƒbƒNƒAƒbƒv‚ğì¬‚µ‚È‚¢
+set autoread                             " ŠO•”ƒGƒfƒBƒ^‚Å‘‚«Š·‚¦‚ç‚ê‚½ê‡A©“®‚Å“Ç‚İ’¼‚·
+set noswapfile                           " ƒXƒƒbƒv‚ğì¬‚µ‚È‚¢
+set hidden                               " •Û‘¶‚µ‚È‚¢‚Å‘¼‚Ìƒtƒ@ƒCƒ‹‚ğ•\¦‚·‚é‚±‚Æ‚ªo—ˆ‚é‚æ‚¤‚É‚·‚é
 
-" è¡¨ç¤ºé–¢é€£
-set showmatch                            " å¯¾æ‹¬å¼§ã®è¡¨ç¤ºã‚’ãƒã‚¤ãƒ©ã‚¤ãƒˆ
-set showcmd                              " ã‚³ãƒãƒ³ãƒ‰ã‚’ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³ã«è¡¨ç¤ºã™ã‚‹
-set number                               " è¡Œç•ªå·ã‚’è¡¨ç¤ºã™ã‚‹
-set nowrap                               " ç”»é¢å¹…ã§æŠ˜ã‚Šè¿”ã•ãªã„
-set sidescroll=1                         " æ°´å¹³ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã®åˆ»ã¿å¹…
-set sidescrolloff=5                      " ã‚«ãƒ¼ã‚½ãƒ«ã®å³ã¾ãŸã¯å·¦ã«è¡¨ç¤ºã™ã‚‹æ–‡å­—æ•°
-set list                                 " ä¸å¯è¦–æ–‡å­—ã‚’è¡¨ç¤ºã™ã‚‹
-set listchars=tab:>\ ,eol:<              " ä¸å¯è¦–æ–‡å­—ã®è¡¨ç¤ºæ–¹æ³•
-set title                                " ã‚¿ã‚¤ãƒˆãƒ«è¡¨ç¤º
-set scrolloff=5                          " ã‚«ãƒ¼ã‚½ãƒ«ã®ä¸Šã¾ãŸã¯ä¸‹ã«è¡¨ç¤ºã™ã‚‹è¡Œæ•°
+" •\¦ŠÖ˜A
+set showmatch                            " ‘ÎŠ‡ŒÊ‚Ì•\¦‚ğƒnƒCƒ‰ƒCƒg
+set showcmd                              " ƒRƒ}ƒ“ƒh‚ğƒXƒe[ƒ^ƒXƒ‰ƒCƒ“‚É•\¦‚·‚é
+set number                               " s”Ô†‚ğ•\¦‚·‚é
+set nowrap                               " ‰æ–Ê•‚ÅÜ‚è•Ô‚³‚È‚¢
+set sidescroll=1                         " …•½ƒXƒNƒ[ƒ‹‚Ì‚İ•
+set sidescrolloff=5                      " ƒJ[ƒ\ƒ‹‚Ì‰E‚Ü‚½‚Í¶‚É•\¦‚·‚é•¶š”
+set list                                 " •s‰Â‹•¶š‚ğ•\¦‚·‚é
+set listchars=tab:>\ ,eol:<              " •s‰Â‹•¶š‚Ì•\¦•û–@
+set title                                " ƒ^ƒCƒgƒ‹•\¦
+set scrolloff=5                          " ƒJ[ƒ\ƒ‹‚Ìã‚Ü‚½‚Í‰º‚É•\¦‚·‚és”
 
-" ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ©ã‚¤ãƒ³é–¢é€£
+" ƒXƒe[ƒ^ƒXƒ‰ƒCƒ“ŠÖ˜A
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
-" å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹ã®è¦–è¦šåŒ–
-highlight WastedSpace cterm=underline ctermfg=white guibg=white
-match WastedSpace /ã€€/
-
-" insertãƒ¢ãƒ¼ãƒ‰ã§(ctrl+)hjklç§»å‹•ã‚’åˆ©ç”¨ã™ã‚‹
+" insertƒ‚[ƒh‚Å(ctrl+)hjklˆÚ“®‚ğ—˜—p‚·‚é
 imap <c-h> <Left>
 imap <c-j> <Down>
 imap <c-k> <Up>
 imap <c-l> <Right>
+
+" ‘SŠpƒXƒy[ƒX‚Ì‹Šo‰»
+function! ZenkakuSpace()
+  highlight ZenkakuSpace cterm=reverse ctermfg=white gui=reverse guifg=white
+endfunction
+ 
+if has('syntax')
+  augroup ZenkakuSpace
+    autocmd!
+    autocmd ColorScheme       * call ZenkakuSpace()
+    autocmd VimEnter,WinEnter * match ZenkakuSpace /@/
+  augroup END
+  call ZenkakuSpace()
+endif
